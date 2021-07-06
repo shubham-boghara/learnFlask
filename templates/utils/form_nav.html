@@ -1,0 +1,31 @@
+<form action="{{ url_for('home') }}" method="get">
+
+         <div class="row">
+           <div class="col">
+             <select name="language" class="form-select form-select-sm mt-5" aria-label=".form-select-sm example">
+               <option selected>Select Your Language</option>
+                 {% for channel in data %}
+                    <option value="{{ channel.get("language") }}">{{ channel.get("language") }}</option>
+                 {% endfor %}
+              </select>
+           </div>
+           <div class="col">
+               <button type="submit" class="btn btn-primary mt-5">Search</button>
+           </div>
+
+          </div>
+</form>
+<div class="row ml-10">
+         <div class="form-check col">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          GTPL RECOMMANDED PACK
+        </label>
+     </div>
+         <div class="form-check col">
+         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+         BROADCASTER BOUQUET
+       </label>
+        </div>
+     </div>

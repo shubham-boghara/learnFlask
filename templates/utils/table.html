@@ -1,0 +1,26 @@
+<div>
+        <table class="table table-bordered border-primary mt-5">
+  <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">rupees</th>
+      <th scope="col">max sd channels</th>
+      <th scope="col">max hd channels</th>
+      <th scope="col">purchase</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for channel_list in channels %}
+    <tr>
+
+            <td>{{ channel_list['name'] }}</td>
+            <td>{{ channel_list['rs'] }} rs</td>
+            <td>{{ channel_list['max_sd_channels'] }}</td>
+            <td>{{ channel_list['max_hd_channels'] }}</td>
+            <td><input type="button" value="next" class="btn btn-outline-primary"></td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+    </div>
